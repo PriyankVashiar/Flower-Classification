@@ -1,4 +1,4 @@
-## Flower-Classification
+# Flower-Classification
 Classifies 5 types of flower using concept of transfer learning
 
 I've trained this model on Ubuntu 18.04 inside a python virtualenv.
