@@ -4,9 +4,9 @@ Classifies 5 types of flower using concept of transfer learning
 I've trained this model on Ubuntu 18.04 inside a python virtualenv.
 To install virtualenv in Ubuntu 18.04.
 
-> sudo apt install python3-pip
-pip3 install virtualenv
-virtualenv flowerdetection
+> sudo apt install python3-pip;
+pip3 install virtualenv;
+virtualenv flowerdetection;
 cd flowerdetection
 
 Before you start any training, you'll need a set of images to teach the network about the new classes you want to recognize. There's a later section that explains how to prepare your own images, but to make it easy we've created an archive of creative-commons licensed flower photos to use initially. To get the set of flower photos, run these commands:
