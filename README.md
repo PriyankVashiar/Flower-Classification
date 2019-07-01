@@ -10,11 +10,11 @@ virtualenv flowerdetection<br/>
 cd flowerdetection<br/>
 source bin/activate<br/>
 pip3 install --upgrade tensorflow<br/>
-Output:
+Output:<br/>
 Installing collected packages: numpy, six, absl-py, keras-preprocessing, h5py, keras-applications, protobuf, google-pasta, gast, termcolor, werkzeug, markdown, grpcio, tensorboard, astor, wrapt, tensorflow-estimator, tensorflow
-Successfully installed absl-py-0.7.1 astor-0.8.0 gast-0.2.2 google-pasta-0.1.7 grpcio-1.21.1 h5py-2.9.0 keras-applications-1.0.8 keras-preprocessing-1.1.0 markdown-3.1.1 numpy-1.16.4 protobuf-3.8.0 six-1.12.0 tensorboard-1.14.0 tensorflow-1.14.0 tensorflow-estimator-1.14.0 termcolor-1.1.0 werkzeug-0.15.4 wrapt-1.11.2
-> pip3 install tensorflow_hub
-Output:
+Successfully installed absl-py-0.7.1 astor-0.8.0 gast-0.2.2 google-pasta-0.1.7 grpcio-1.21.1 h5py-2.9.0 keras-applications-1.0.8 keras-preprocessing-1.1.0 markdown-3.1.1 numpy-1.16.4 protobuf-3.8.0 six-1.12.0 tensorboard-1.14.0 tensorflow-1.14.0 tensorflow-estimator-1.14.0 termcolor-1.1.0 werkzeug-0.15.4 wrapt-1.11.2<br/>
+> pip3 install tensorflow_hub<br/>
+Output:<br/>
 Installing collected packages: tensorflow-hub
 Successfully installed tensorflow-hub-0.5.0
 
@@ -32,11 +32,11 @@ The MobileNet is configurable in two ways:
     Input image resolution: 128,160,192, or 224px. Unsurprisingly, feeding in a higher resolution image takes more processing time, but results in better classification accuracy.
     The relative size of the model as a fraction of the largest MobileNet: 1.0, 0.75, 0.50, or 0.25.
 
-We will use 224 0.5 for this codelab.
+We will use 224 0.5 for this project.
 
 With the recommended settings, it typically takes only a couple of minutes to retrain on a laptop. You will pass the settings inside Linux shell variables. Set those variables in your shell: 
 
-> IMAGE_SIZE=224
+> IMAGE_SIZE=224<br/>
 ARCHITECTURE="mobilenet_0.50_${IMAGE_SIZE}"
 
 # Start TensorBoard
