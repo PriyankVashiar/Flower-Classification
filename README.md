@@ -47,7 +47,7 @@ You can kill all existing TensorBoard instances with:
 Download the retraining script from this : https://github.com/tensorflow/hub/blob/master/examples/image_retraining/retrain.py
 Then run this command:
 
-> python -m scripts.retrain \
+> python3 -m scripts.retrain \
   --bottleneck_dir=tf_files/bottlenecks \
   --how_many_training_steps=500 \
   --model_dir=tf_files/models/ \
@@ -75,9 +75,11 @@ The retraining script writes data to the following two files:
 
 To classify images, download this script: https://github.com/tensorflow/tensorflow/blob/master/tensorflow/examples/label_image/label_image.py
 
-> python -m scripts.label_image \
+> python3 -m scripts.label_image \
     --graph=tf_files/retrained_graph.pb  \
     --image=tf_files/flower_photos/daisy/21652746_cc379e0eea_m.jpg
+    
+It may be possible that you may get and error in label_image.py like KeyError: "The name 'import/Mul' refers to an Operation not in the graph." . For that, just change line 77 input_layer="input" to input_layer="mul"
     
 You might get output like:
 
@@ -93,7 +95,7 @@ The retraining script has several other command line options you can use.
 
 You can read about these options in the help for the retrain script:
 
-> python -m scripts.retrain -h
+> python3 -m scripts.retrain -h
 
 Try adjusting some of these options to see if you can increase the final validation accuracy.
 
