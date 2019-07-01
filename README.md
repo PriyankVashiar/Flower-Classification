@@ -8,6 +8,15 @@ To install virtualenv in Ubuntu 18.04.
 pip3 install virtualenv<br/>
 virtualenv flowerdetection<br/>
 cd flowerdetection<br/>
+source bin/activate<br/>
+pip3 install --upgrade tensorflow<br/>
+Output:
+Installing collected packages: numpy, six, absl-py, keras-preprocessing, h5py, keras-applications, protobuf, google-pasta, gast, termcolor, werkzeug, markdown, grpcio, tensorboard, astor, wrapt, tensorflow-estimator, tensorflow
+Successfully installed absl-py-0.7.1 astor-0.8.0 gast-0.2.2 google-pasta-0.1.7 grpcio-1.21.1 h5py-2.9.0 keras-applications-1.0.8 keras-preprocessing-1.1.0 markdown-3.1.1 numpy-1.16.4 protobuf-3.8.0 six-1.12.0 tensorboard-1.14.0 tensorflow-1.14.0 tensorflow-estimator-1.14.0 termcolor-1.1.0 werkzeug-0.15.4 wrapt-1.11.2
+> pip3 install tensorflow_hub
+Output:
+Installing collected packages: tensorflow-hub
+Successfully installed tensorflow-hub-0.5.0
 
 Before you start any training, you'll need a set of images to teach the network about the new classes you want to recognize. There's a later section that explains how to prepare your own images, but to make it easy we've created an archive of creative-commons licensed flower photos to use initially. To get the set of flower photos, run these commands:
 
@@ -102,3 +111,7 @@ Try adjusting some of these options to see if you can increase the final validat
 For example, the --learning_rate parameter controls the magnitude of the updates to the final layer during training. So far we have left it out, so the program has used the default learning_rate value of 0.01. If you specify a small learning_rate, like 0.005, the training will take longer, but the overall precision might increase. Higher values of learning_rate, like 1.0, could train faster, but typically reduces precision, or even makes training unstable.
 
 You need to experiment carefully to see what works for your case.
+
+# Conclusion
+
+In my case, I got an accuracy of 89.39% validation accuracy. You will mostly get an accuracy between 85 - 96%.
